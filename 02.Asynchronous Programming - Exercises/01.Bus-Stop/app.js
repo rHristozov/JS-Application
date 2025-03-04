@@ -22,6 +22,5 @@ async function getInfo() {
 } catch (err) {
     busOuput.textContent = '';
     stopNameEl.textContent = 'Error';
-
 }
 }
