@@ -1,0 +1,118 @@
+#details-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url(../images/form-bg.webp);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 5px solid black;
+  height: 85vh;
+  gap: 100px;
+  font-family: "Jaro", sans-serif;
+  font-size: 22px;
+  color: aliceblue;
+  text-shadow: 2px 2px black;
+}
+
+#details{
+  scale: 0.9;
+
+}
+#info-wrapper{
+  width: 40vw;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: -100px;
+}
+#details-wrapper img {
+  display: block;
+  height: 55vh;
+  width: 90vh;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  margin-left: 50px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+border-radius: 5px;
+border: 2px solid black;
+}
+
+#game-details-name{
+  font-size: 40px;
+  font-family: "Pixelify Sans", sans-serif;
+}
+
+#action-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: -125px;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  
+}
+
+#action-buttons a {
+  text-decoration: none;
+  margin-bottom: 10px;
+  font-size: 21px;
+  text-align: center;
+  border-radius: 5px;
+  font-family: "Pixelify Sans", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  text-transform: uppercase;
+  color: #fff;
+  background: linear-gradient(to bottom, #b8b7b6 0%, #333332 100%);
+  border: 4px solid #000;
+  box-shadow: 4px 4px 0 #000;
+  width: 20%;
+  padding: 5px;
+  border: 0;
+  color: #ded8d8;
+  cursor: pointer;
+  font-weight: 600;
+
+}
+#action-buttons a:hover {
+  background: rgb(177, 177, 177);
+  color: #020202;
+  text-shadow: none;
+}
+
+#details h3{
+  text-align: center;
+  letter-spacing: 6px;
+  color: rgb(224, 222, 210);
+  text-shadow: 3px 3px rgb(0, 0, 0);
+  }
+
+  @media (max-width: 1100px) {
+  #details-wrapper {
+    flex-direction: column;
+    height: 80vh;
+    font-size: 12px;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+  }
+  #details-wrapper img{
+    height: 100px;
+    width: auto;
+    margin: 0;
+    padding: 0;
+  }
+  #game-details-name{
+    margin: 0;
+    font-size: 30px;
+  }
+
+  #info-wrapper{
+    height: 40vh;
+    width: 75vw;
+    justify-content: center;
+    align-items: center;
+  }
+}

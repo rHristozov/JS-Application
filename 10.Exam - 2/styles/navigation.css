@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+
+
+
+
+body {
+  background-image: url(../images/pixel-bg.webp);
+  background-size: 100vw;
+  margin: 0;
+  padding: 0;
+overflow-x: hidden;
+font-family: "Pixelify Sans", sans-serif;
+background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+main{
+  width: 80vw;
+
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0em 3em;
+  flex-direction: column;
+  width: 12vw;
+}
+
+nav {
+  flex-direction: column;
+  display: flex;
+  gap: 40px;
+  clip-path: polygon(0 9%, 15% 9%, 15% 0%, 85% 0%, 85% 9%, 100% 9%, 100% 92%, 85% 92%, 85% 100%, 15% 100%, 16% 92%, 0 92%);
+  background-color: #f5f5f5d3;
+  padding: 55px 0px;
+  box-shadow: rgba(0, 0, 0, 0.628) 0px 54px 55px, rgba(0, 0, 0, 0.456) 0px -12px 30px, rgba(0, 0, 0, 0.497) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  height: 50vh;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1000; 
+  margin-top: 130px;
+}
+ .guest{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.user{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+#logo-img {
+  height: 17vh;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+#logo:hover{
+  scale: 1.1;
+}
+nav a {
+  font-size:5vh;
+  font-weight: 400;  
+  text-align: center;
+  color:#5a5959;
+  text-shadow: 1px 1px black;
+}
+
+header a {
+  padding: 0 10px;
+  text-decoration: none;
+  
+  
+}
+nav a:hover {
+  color:#000000;
+  scale: 1.1;
+  border-bottom: 2px dashed black;
+  width: 14vw;
+}
+#coll:hover {
+  color:#000000;
+  scale: 1.1;
+}
+
+
+footer {
+  background-color: #242323;
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
+  font-weight: 100;
+  letter-spacing: 5px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#hero h1 {
+width: 50vw;
+}
+
+#hero {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  flex-direction: row;
+ height: 100vh;
+}
+
+#hero-intro {
+  width: 70vw;
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 40px;
+  color:#cdc2d4;
+  background-color: #000000b7;
+  padding: 30px;
+}
+
+#hero-intro span{
+ color: #adadad;
+ font-weight: 700;
+ font-size: 50px;
+ border-bottom: 4px dashed #adadad;
+}
+
+#content{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: #0000004a;
+  background-image: radial-gradient(#000000 15%, transparent 0);
+  background-size: 5px 5px;
+  min-height: 100vh;
+  flex-direction: row-reverse;
+}
+
+#hero-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#hero-wrapper a {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 19px;
+  text-transform: uppercase;
+  color: #fff;
+  background: linear-gradient(to bottom, #b8b7b6 0%, #333332 100%);
+  border: 4px solid #000;
+  box-shadow: 4px 4px 0 #000;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+}
+
+#hero-wrapper a:hover {
+
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+}

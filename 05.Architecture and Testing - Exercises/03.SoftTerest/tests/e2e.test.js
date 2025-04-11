@@ -1,5 +1,4 @@
-
-const { chromium } = require('playwright-chromium');
+const { chromium } = require('playwright-webkit');
 const { expect } = require('chai');
 
 const host = 'http://localhost:3000'; // Application host (NOT service host - that can be anything)
@@ -43,7 +42,7 @@ describe('E2E tests', function () {
 
   before(async () => {
     if (DEBUG) {
-      browser = await chromium.launch({ headless: false, slowMo: 500 });
+      browser = await chromium.launch({ headless: false, slowMo: slowMo });
     } else {
       browser = await chromium.launch();
     }
@@ -91,7 +90,9 @@ describe('E2E tests', function () {
       await page.goto(host);
       await page.click('text=Dashboard', { timeout: interval });
       await page.waitForSelector('#dashboard-holder', { timeout: interval });
-      await page.click('div.card:has-text("111111") >> text=Details', { timeout: interval });
+      await page.click('div.card:has-text("111111") >> text=Details', {
+        timeout: interval,
+      });
 
       const title = await page.textContent('h2');
       const desc = await page.textContent('p.idea-description');
@@ -106,7 +107,9 @@ describe('E2E tests', function () {
       await page.goto(host);
       await page.click('text=Dashboard', { timeout: interval });
       await page.waitForSelector('#dashboard-holder', { timeout: interval });
-      await page.click('div.card:has-text("111111") >> text=Details', { timeout: interval });
+      await page.click('div.card:has-text("111111") >> text=Details', {
+        timeout: interval,
+      });
       await page.waitForSelector('h2:has-text("111111")', { timeout: interval });
 
       const btn = await page.$$('text=Delete');
@@ -232,7 +235,9 @@ describe('E2E tests', function () {
 
       await page.click('text=Dashboard', { timeout: interval });
       await page.waitForSelector('#dashboard-holder', { timeout: interval });
-      await page.click('div.card:has-text("111111") >> text=Details', { timeout: interval });
+      await page.click('div.card:has-text("111111") >> text=Details', {
+        timeout: interval,
+      });
       await page.waitForSelector('h2:has-text("111111")', { timeout: interval });
 
       const btn = await page.$$('text=Delete');
@@ -243,7 +248,9 @@ describe('E2E tests', function () {
       await loginUser();
       await page.click('text=Dashboard', { timeout: interval });
       await page.waitForSelector('#dashboard-holder', { timeout: interval });
-      await page.click('div.card:has-text("111111") >> text=Details', { timeout: interval });
+      await page.click('div.card:has-text("111111") >> text=Details', {
+        timeout: interval,
+      });
       await page.waitForSelector('h2:has-text("111111")', { timeout: interval });
 
       expect(await page.isVisible('text=Delete')).to.be.true;
@@ -254,7 +261,9 @@ describe('E2E tests', function () {
       await loginUser();
       await page.click('text=Dashboard', { timeout: interval });
       await page.waitForSelector('#dashboard-holder', { timeout: interval });
-      await page.click('div.card:has-text("111111") >> text=Details', { timeout: interval });
+      await page.click('div.card:has-text("111111") >> text=Details', {
+        timeout: interval,
+      });
       await page.waitForSelector('h2:has-text("111111")', { timeout: interval });
 
       page.on('dialog', (dialog) => dialog.accept());

@@ -1,0 +1,128 @@
+
+#retro-games {
+  display: flex;
+  align-items:center;
+  justify-content:center ;
+  flex-wrap: wrap;
+  width: 80vw;
+}
+ h2 {
+  text-align: center;
+  font-size: 50px;
+  color:#bbbbbb;
+  margin-top: 5px;
+  letter-spacing: 5px;
+}
+
+#no-game{
+  margin-top: 20px;
+}
+h3{
+  font-size: 20px;
+  font-family: "Jaro", sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 18vw;
+  text-align: center;
+}
+
+.game {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 20vw;
+  height: 65vh;
+  padding-bottom: 1rem;
+  margin: 10px auto;
+background-image: url(../images/gb.png);
+ background-position: center;
+ background-size: cover;
+
+}
+
+.game span {
+  color: rgb(238, 237, 230);
+  margin-bottom: 10px;
+}
+
+.game img {
+width: 17vw;
+height: 35vh;
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+border-radius: 5px;
+border: 2px solid black;
+}
+.game-info{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 12vw;
+}
+
+.game .game-name {
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px rgb(0, 0, 0);
+  font-family: "Pixelify Sans", sans-serif;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.details-btn {
+  text-transform: uppercase;
+  color: #fff;
+  background: linear-gradient(to bottom, #b8b7b6 0%, #333332 100%);
+  border: 4px solid #000;
+  box-shadow: 4px 4px 0 #000;
+ margin-top: 2vh;
+ padding: 0 15px;
+}
+.details-btn:hover {
+ background: #fff;
+  color: #000000;
+  text-shadow: none;
+}
+.game p {
+ width: 18vw;
+  font-size: 18px;
+font-weight: 800;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px rgb(62, 62, 61);
+  margin: 0;
+}
+
+@media (max-width: 1000px) {
+  h2 {
+    font-size: 25px; 
+  }
+
+  .game {
+    width: 40%; 
+  }
+
+  .game-info {
+    width: 40%;
+  }
+
+  .details-btn {
+    font-size: 12px; 
+    width: 50px;
+  }
+
+  .game p {
+    font-size: 9px; 
+  }
+
+  .game img {
+    height:25vh;
+  }
+}
+
+.platform{
+  font-family: 'Courier New', Courier, monospace;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #000000bb;
+}

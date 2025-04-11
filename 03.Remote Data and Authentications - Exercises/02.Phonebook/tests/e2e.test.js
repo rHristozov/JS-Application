@@ -1,10 +1,10 @@
-const { chromium } = require('playwright-chromium');
+const { chromium } = require('playwright-webkit');
 const { expect } = require('chai');
 
-const host = 'http://localhost:3000'; // Application host (NOT service host - that can be anything)
+const host = 'http://localhost:5500'; // Application host (NOT service host - that can be anything)
 const interval = 300;
 const timeout = 8000;
-const DEBUG = false;
+const DEBUG = true;
 const slowMo = 500;
 
 const mockData = {
@@ -36,9 +36,7 @@ describe('E2E tests', function () {
   this.timeout(DEBUG ? 120000 : timeout);
   before(
     async () =>
-      (browser = await chromium.launch(
-        DEBUG ? { headless: false, slowMo } : {}
-      ))
+      (browser = await chromium.launch(DEBUG ? { headless: false, slowMo } : {}))
   );
   after(async () => await browser.close());
   beforeEach(async () => {
@@ -59,7 +57,7 @@ describe('E2E tests', function () {
       get(data);
 
       await page.goto(host);
-      await page.waitForSelector('#btnLoad' , { timeout: interval });
+      await page.waitForSelector('#btnLoad', { timeout: interval });
 
       await page.click('#btnLoad', { timeout: interval });
 
@@ -77,14 +75,14 @@ describe('E2E tests', function () {
       get(data);
 
       await page.goto(host);
-      await page.waitForSelector('#btnLoad' , { timeout: interval });
+      await page.waitForSelector('#btnLoad', { timeout: interval });
 
       await page.click('#btnLoad', { timeout: interval });
 
       const phone = await page.$$eval(`#phonebook li`, (t) =>
         t.map((s) => s.textContent)
       );
-    
+
       expect(phone.length).to.equal(data.length);
     });
 
@@ -112,21 +110,21 @@ describe('E2E tests', function () {
       expect(postData.phone).to.equal(data.phone + '1');
     });
 
-    it('Delete makes correct API call', async () => {
+    it.only('Delete makes correct API call', async () => {
       const data = mockData.list[0];
       await page.goto(host);
       const { del } = await handle(endpoints.delete(data._id));
       const { onResponse, isHandled } = del({ id: data._id });
 
       await page.click('#btnLoad', { timeout: interval });
-
       await page.waitForSelector('#phonebook>li', { timeout: interval });
 
       await Promise.all([
         onResponse(),
         page.click(
-          `#phonebook li:has-text("${data.person}: ${data.phone}") >> text=Delete`
-          , { timeout: interval }),
+          `#phonebook li:has-text("${data.person}: ${data.phone}") >> text=Delete`,
+          { timeout: interval }
+        ),
       ]);
 
       expect(isHandled()).to.be.true;

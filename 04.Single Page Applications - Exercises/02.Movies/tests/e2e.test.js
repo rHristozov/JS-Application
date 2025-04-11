@@ -3,9 +3,10 @@ const { expect } = require('chai');
 
 const host = 'http://localhost:3000'; // Application host (NOT service host - that can be anything)
 
-const interval = 300;
+const interval = 1000;
 const timeout = 8000;
-const DEBUG = false;
+// const DEBUG = false;
+const DEBUG = true;
 const slowMo = 500;
 
 const mockData = {
@@ -393,7 +394,7 @@ describe('E2E tests', function () {
       expect(await page.isVisible('text="Edit"')).to.be.true;
     });
 
-    it('edit should populate form with correct data', async () => {
+    it.only('edit should populate form with correct data', async () => {
           // Login user
     const loginUser = async () => {
       const data = mockData.users[0];

@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Creepster&display=swap');
+
+
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+
+#login, #register{
+  margin-top: 32vh;
+}
+#create, #edit {
+  margin-top: 20vh;
+}
+
+
+.form {
+background-image: url(../images/form-bg.webp);
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+  border: 5px solid rgb(231, 222, 222);
+  max-width: 440px;
+  margin: auto;
+  margin-top: -110px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: -2px 2px 21px 14px rgba(0,0,0,1);
+}
+
+.form h2 {
+  margin-top: 2px;
+  font-size: 40px;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px black;
+}
+
+.form input{
+  border-radius: 10px;
+ border: 1px solid black;
+  background: #ffffff;
+  width: 100%;
+  height: 50px;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.form textarea {
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid rgb(206, 206, 206);
+  width: 99%;
+  max-width: 99%;
+  min-width: 99%;
+  min-height: 50px;
+  margin-bottom: 10px;
+
+}
+
+.form select{
+  background: #ffffff;
+  border-radius: 10px;
+  border: 1px solid rgb(206, 206, 206);
+  width: 99%;
+  max-width: 99%;
+  min-width: 99%;
+  min-height: 50px;
+  margin-bottom: 10px;
+}
+.form button {
+  text-transform: uppercase;
+  color: #fff;
+  background: linear-gradient(to bottom, #b8b7b6 0%, #333332 100%);
+  border: 4px solid #000;
+  box-shadow: 4px 4px 0 #000;
+  width: 80%;
+  border: 0;
+  padding: 5px;
+  color: #ded8d8;
+  font-size: 28px;
+  cursor: pointer;
+  border: 3px solid black;
+  font-weight: 600;
+}
+.form button:hover,
+.form button:active,
+.form button:focus {
+  background: rgb(206, 205, 205);
+  color: #020202;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.container:before,
+.container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.form .message {
+  margin: 15px 0 0;
+  color: #000000;
+  font-size: 17px;
+  background-color: white;
+}
+.form .message a {
+  color: #dbdbd9;
+  text-decoration: none;
+  text-shadow: 1px 1px black;
+  font-size: 18px;
+}
+
+
+
+.no-result {
+  margin-top: 8rem;
+  font-size: 30px;
+}
+
+#edit , #create, #login , #register {
+  scale: 0.72;
+}
+
+
+
+.border{
+  height: 100px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  border-radius: 20px;
+}

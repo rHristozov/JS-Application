@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/styles.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "lit-html": "/node_modules/lit-html/lit-html.js",
+          "page": "/node_modules/page/page.mjs"
+        }
+      }
+    </script>
+    <script type="module" src="/src/app.js"></script>
+    <title>Cyberpunk Market</title>
+  </head>
+  <body>
+    <!-- BONUS: Notification -->
+    <section id="notifications">
+      <div id="errorBox" class="notification">
+        <span class="msg">MESSAGE</span>
+      </div>
+    </section>
+    <div id="wrapper">
+      <header></header>
+      <main id="main-element"></main>
+    </div>
+    <footer>
+      <p>SoftUni Exam 2024 &copy;</p>
+    </footer>
+  </body>
+</html>
